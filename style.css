@@ -1,0 +1,713 @@
+/* ==========================================
+   RESET & AESTHETIC CONFIGURATION
+   ========================================== */
+:root {
+    --bg-color: #f8fafc;
+    --primary-mint: #10b981;
+    --primary-blue: #3b82f6;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.9);
+    --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+        url("image/sembilan25.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Background Blobs */
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: -1;
+    opacity: 0.5;
+}
+.blob-1 { width: 500px; height: 500px; background: #a7f3d0; top: -150px; left: -150px; }
+.blob-2 { width: 550px; height: 550px; background: #bfdbfe; bottom: -150px; right: -150px; }
+
+/* Wrapper Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* ==========================================
+   GLASSMORPHISM NAVBAR
+   ========================================== */
+.navbar-container {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-nav {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 12px 28px;
+    border-radius: 50px;
+}
+
+.brand-title { font-weight: 700; color: var(--primary-mint); font-size: 1.1rem; }
+.brand-sub { font-size: 0.85rem; color: #111827; }
+
+.nav-menu { display: flex; list-style: none; gap: 8px; }
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover { background: rgba(59, 130, 246, 0.08); color: var(--primary-blue); }
+.nav-btn.active { background: var(--primary-blue); color: #ffffff; }
+
+/* ==========================================
+   VIEWPORT & TAB PAGE SWITCHING
+   ========================================== */
+.content-viewport {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Kunci utama: Halaman disembunyikan sampai aktif */
+.tab-page {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.tab-page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-card {
+    background: rgb(225, 255, 255, 0.60);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(255, 255, 255, 0.7);
+    box-shadow: var(--glass-shadow);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.page-card {
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-header { text-align: center; margin-bottom: 30px; }
+.section-header h2 { font-size: 1.8rem; }
+.section-header p { color: var(--text-muted); font-size: 0.9rem; margin-top: 5px; }
+
+/* ==========================================
+   KONTEN ISI PER TAB MENU
+   ========================================== */
+
+/* 1. Beranda */
+.hero-card {
+    text-align: center;
+    padding: 80px 20px;
+}
+.badge {
+    background: rgba(16, 185, 129, 0.15);
+    color: #0f172a;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 15px 0;
+}
+.hero-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px; }
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-mint), var(--primary-blue));
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 2. Tentang */
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; align-items: center; }
+.placeholder-img {
+    height: 220px;
+    background: #e2e8f0;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+/* 3. Anggota */
+.cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.member-item {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+.avatar-box {
+    width: 60px; height: 60px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    margin: 0 auto 10px auto;
+    font-size: 1.5rem;
+}
+.member-item .role { font-size: 0.75rem; font-weight: 700; color: var(--primary-mint); }
+.member-item .quote { font-size: 0.8rem; font-style: italic; color: var(--text-muted); margin-top: 8px; }
+
+/* 4. Kenangan */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.photo-card { background: rgba(255, 255, 255, 0.6); padding: 15px; border-radius: 16px; text-align: center; }
+.photo-placeholder { height: 180px; background: #e2e8f0; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: var(--text-muted); margin-bottom: 10px; }
+
+/* 5. Perjalanan */
+.timeline-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.timeline-box { background: rgba(255, 255, 255, 0.6); padding: 20px; border-radius: 16px; border-top: 4px solid var(--primary-mint); }
+.time-tag { background: var(--primary-blue); color: #fff; padding: 3px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 700; }
+
+/* 6. Dokumentasi */
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.video-card { height: 200px; background: #e2e8f0; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; font-size: 2rem; color: var(--text-muted); }
+
+/* 7. Sosmed */
+.text-center { text-align: center; }
+.sosmed-container { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+.sosmed-btn { padding: 12px 24px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; }
+.sosmed-btn.instagram { background: #e1306c; }
+.sosmed-btn.tiktok { background: #000000; }
+.sosmed-btn.youtube { background: #ff0000; }
+
+/* Footer */
+.glass-footer { text-align: center; padding: 15px; font-size: 0.8rem; color: #111827; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-grid, .gallery-grid, .timeline-container { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; }
+}
+/* Styling Kartu Beranda agar Logo Bisa Ditumpuk di Belakang */
+.hero-card {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative; /* Wajib agar logo patuh pada area kartu */
+    overflow: hidden;   /* Agar logo tidak meluber keluar dari kartu */
+}
+
+/* Styling Logo Watermark Transparan */
+.hero-watermark-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Mengatur posisi pas di tengah */
+    width: 10px;                     /* Ukuran lebar logo (sesuaikan kebutuhan) */
+    height: auto;
+    opacity: 0.12;                    /* Tingkat transparansi (0.10 - 0.15 paling pas) */
+    pointer-events: none;             /* Agar logo tidak menghalangi tombol/teks saat diklik */
+    z-index: 0;                       /* Posisi di paling belakang */
+}
+
+/* Pastikan Teks dan Tombol Tetap Berada di Depan Logo */
+.hero-card .badge,
+.hero-card .hero-title,
+.hero-card .hero-subtitle,
+.hero-card .btn-primary {
+    position: relative;
+    z-index: 1;                       /* Posisi di atas logo */
+}
+.about-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-logo-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.avatar-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+
+/* ==========================================
+   RESPONSIVE MENU: BOTTOM NAV UNTUK HP (PORTRAIT)
+   ========================================== */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    /* Pindahkan container navbar ke bawah layar */
+    .navbar-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        padding: 10px 15px;
+        z-index: 1000;
+    }
+
+    .glass-nav {
+        flex-direction: column;
+        border-radius: 25px;
+        padding: 8px 12px;
+        gap: 6px;
+    }
+
+    /* Sembunyikan teks brand di HP agar tidak makan tempat */
+    .nav-brand {
+        display: none; 
+    }
+
+    /* Menu berjejer horizontal & bisa di-scroll jika tombol banyak */
+    .nav-menu {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Sembunyikan scrollbar bawaan browser */
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Sesuaikan ukuran tombol menu */
+    .nav-btn {
+        white-space: nowrap;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    /* Memberi jarak di bawah konten agar tidak tertutup navbar */
+    .content-viewport {
+        padding-bottom: 90px;
+    }
+}
+
+/* ==========================================
+   PERBAIKAN RESPONSIVE LAYOUT HP
+   ========================================== */
+@media screen and (max-width: 600px) {
+    /* 1. Cegah container utama meluber ke samping */
+    body, .app-container {
+        overflow-x: hidden;
+    }
+
+    .content-viewport {
+        padding: 15px 10px;
+    }
+
+    /* 2. Sesuaikan padding kartu utama agar pas di HP */
+    .glass-card {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    /* 3. Ubah grid anggota & galeri menjadi 1 kolom vertikal */
+    .cards-grid, 
+    .gallery-grid, 
+    .timeline-container, 
+    .video-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    /* 4. Sesuaikan ukuran avatar agar ramah layar HP */
+    .avatar-box {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ==========================================
+   6. DOKUMENTASI VIDEO
+   ========================================== */
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.video-card {
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 22px;
+    background: rgba(220, 228, 239, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-card video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 22px 22px 0 0;
+    object-fit: contain;
+}
+
+.video-card span {
+    display: block;
+    width: 100%;
+    padding: 15px 18px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Atur pembungkus logo agar berada di tengah tanpa background/kotakan */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Menghilangkan background kotak */
+    padding: 0;
+    border: none;
+}
+
+/* Sesuaikan ukuran logo jika diperlukan */
+.about-logo-img {
+    max-width: 300px; /* Atur lebar logo sesuai keinginan */
+    height: auto;
+}
+
+/* ==========================================
+   GALERI KENANGAN FOTO
+   ========================================== */
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.memory-photo {
+    width: fit-content;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.memory-photo:hover {
+    transform: translateY(-5px);
+}
+
+.memory-photo img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.memory-photo span {
+    display: block;
+    padding: 12px 8px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ==========================================
+   POPUP FOTO KENANGAN
+   ========================================== */
+
+.memory-photo img {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.memory-photo img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.photo-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    cursor: zoom-out;
+}
+
+.photo-modal.active {
+    display: flex;
+}
+
+.photo-modal img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    cursor: default;
+}
+
+.close-photo {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-photo:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================
+   POPUP GALERI BANYAK FOTO
+   ========================================== */
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    padding: 30px;
+}
+
+.gallery-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.close-gallery {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.gallery-popup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-popup-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .gallery-content {
+        padding: 25px 15px;
+        max-height: 85vh;
+    }
+
+    .gallery-popup-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-popup-grid img {
+        height: 130px;
+    }
+}
+/* FOTO DI DALAM GALERI BISA DIKLIK */
+.gallery-popup-grid img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.gallery-popup-grid img:hover {
+    transform: scale(1.03);
+}
+.member-photo-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10002;
+    background: rgba(0, 0, 0, 0.88);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    cursor: zoom-out;
+}
+
+.member-photo-modal.active {
+    display: flex;
+}
+
+.member-photo-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+}
+
+.close-member-photo {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}.hero-card {
+    background-image: url('image/sembilan25.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.78);
+    z-index: 0;
+}
+
+.hero-card > * {
+    position: relative;
+    z-index: 1;
+}
+.glass-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.65),
+            rgba(255, 255, 255, 0.65)
+        ),
+        url('image/sembilan25.jpg');
+
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.glass-card > * {
+    position: relative;
+    z-index: 1;
+}
