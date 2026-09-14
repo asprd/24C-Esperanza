@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPERANZA | Website Kelas</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BACKGROUND BLOBS -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="app-container">
+        
+        <!-- FLOATING NAVBAR (PENGATUR MENU) -->
+        <header class="navbar-container">
+            <nav class="glass-nav">
+                <div class="nav-brand">
+                    <span class="brand-title">24'C ESPERANZA</span>
+                    <span class="brand-sub">| SMP Negeri 1 Prambanan</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><button class="nav-btn active" onclick="switchTab('beranda')"><i class="fa-solid fa-house"></i> Beranda</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('tentang')"><i class="fa-solid fa-circle-info"></i> Tentang</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('anggota')"><i class="fa-solid fa-users"></i> Anggota</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('kenangan')"><i class="fa-solid fa-images"></i> Kenangan</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('perjalanan')"><i class="fa-solid fa-timeline"></i> Perjalanan</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('sosmed')"><i class="fa-solid fa-share-nodes"></i> Sosmed</button></li>
+                    <li><button class="nav-btn" onclick="switchTab('masukan')"><i class="fa-solid fa-comment"></i> Masukan</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- AREA KONTEN (1 HALAMAN HANYA MENAMPILKAN 1 MENU) -->
+        <main class="content-viewport">
+
+            <!-- 1. HALAMAN BERANDA -->
+            <section id="beranda" class="tab-page active">
+                <div class="glass-card hero-card">
+
+                    <span class="badge">SMP Negeri 1 Prambanan Klaten</span>
+                    <h1 class="hero-title">THIS IS 24'C ESPERANZA</h1>
+                    <p class="hero-subtitle">One Class. Countless Stories. (2021 – 2024)</p>
+                    <button class="btn btn-primary" onclick="switchTab('tentang')">Jelajahi Cerita Kita <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 2. HALAMAN TENTANG KAMI -->
+            <section id="tentang" class="tab-page">
+                <div class="glass-card page-card">
+                    <div class="section-header">
+                        <h2>Tentang Kami</h2>
+                        <p>Mengenal lebih dekat 24'C ESPERANZA</p>
+        </div>
+        <div class="about-grid">
+            <div class="logo-wrapper">
+                <img src="image/logo.png" alt="logo" class="about-logo-img">
+            </div>
+            <div class="about-text">
+                <h3>Rumah, Cerita, & Kita.</h3>
+                <p style="text-align: justify;">Jujur aja, kelas ini bukan sekadar deretan meja, kursi, dan jadwal pelajaran. Tetapi Kelas ini adalah gabungan dari 32 kepala- 13 Siswa Putra dan 19 Siswa Putri dengan karakter berbeda-beda yang kebetulan disatukan di ruang yang sama.</p>
+                <p style="text-align: justify;">Kisah kita dimulai dari hari pertama yang canggung, sampai akhirnya berubah jadi tempat kita berbagi tawa, keluhan tugas, cita-cita, dan momen-momen acak yang bikin kangen. Website ini dibuat bukan cuma buat pajangan, tapi buat merekam setiap jejak, dinamika, dan kenangan dari kita.</p>
+                <p style="text-align: justify;">Selamat datang di ruang digital 24'C. Selamat melihat kembali perjalanan yang udah kita lalui bersama!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- 3. HALAMAN ANGGOTA -->
+            <section id="anggota" class="tab-page">
+                <div class="glass-card page-card">
+                    
+                    <div class="section-header">
+                        <h2>Anggota Kelas</h2>
+                        <p>Kumpulan manusia random yang kompaknya cuma pas mau lulus doang, tapi tetep jadi alasan kenapa kelas ini rusuh dan ngangenin.</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/01.jpg" alt="Alifia">
+                            </div>
+                            <h3>ALIFIA</h3>
+                            <p class="quote">"Alifia Alriza Ramadhani"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/02.jpg" alt="Alvian">
+                            </div>
+                            <h3>ALVIAN</h3>
+                            <p class="quote">"Alvian Dwi Syahbani"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/03.jpg" alt="Alvin">
+                            </div>
+                            <h3>ALVIN</h3>
+                            <p class="quote">"Alvin Bastiyan"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/04.jpg" alt="Manda">
+                            </div>
+                            <h3>MANDA</h3>
+                            <p class="quote">"Amanda Gurita Puspandawati"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/05.jpg" alt="Amanda">
+                            </div>
+                            <h3>AMANDA</h3>
+                            <p class="quote">"Amanda K Listiono Putri"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/06.jpg" alt="Amel">
+                            </div>
+                            <h3>AMEL</h3>
+                            <p class="quote">"Amelva Zaneta Orlin"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/07.jpg" alt="Asep">
+                            </div>
+                            <h3>ASEP</h3>
+                            <p class="quote">"Asep Romadoni"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/08.jpg" alt="Aufa">
+                            </div>
+                            <h3>AUFA</h3>
+                            <p class="quote">"Aufa Desvita Putri"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/09.jpg" alt="Zizah">
+                            </div>
+                            <h3>ZIZAH</h3>
+                            <p class="quote">"Azizah Nuur Fatihah"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/10.jpg" alt="Okta">
+                            </div>
+                            <h3>OKTA</h3>
+                            <p class="quote">"Azizah Oktaviani Putri"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/11.jpg" alt="Angga">
+                            </div>
+                            <h3>ANGGA</h3>
+                            <p class="quote">"Dedek Erlangga"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/12.jpg" alt="Shandy">
+                            </div>
+                            <h3>SHANDY</h3>
+                            <p class="quote">"Dzaqabus Ekwashandy"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/13.jpg" alt="Gita">
+                            </div>
+                            <h3>GITA</h3>
+                            <p class="quote">"Gita Dwi Januarti"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/14.jpg" alt="Hafizh">
+                            </div>
+                            <h3>HAFIZH</h3>
+                            <p class="quote">"Hafizh Awaludin Aziz"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/15.jpg" alt="Haka">
+                            </div>
+                            <h3>HAKA</h3>
+                            <p class="quote">"Haka Okza Kusworo"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/16.jpg" alt="Hamdan">
+                            </div>
+                            <h3>HAMDAN</h3>
+                            <p class="quote">"Hamdan Pradika Kurniadi"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/17.jpg" alt="Ilham">
+                            </div>
+                            <h3>ILHAM</h3>
+                            <p class="quote">"Ilham Nurdianto"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/18.jpg" alt="Iqbal">
+                            </div>
+                            <h3>IQBAL</h3>
+                            <p class="quote">"Iqbal Qhazali"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/19.jpg" alt="Leny">
+                            </div>
+                            <h3>LENY</h3>
+                            <p class="quote">"Leny Setiawati"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/20.jpg" alt="Abi">
+                            </div>
+                            <h3>ABI</h3>
+                            <p class="quote">"Muhammad Abi Rizki"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/21.jpg" alt="Hafish">
+                            </div>
+                            <h3>HAFISH</h3>
+                            <p class="quote">"Muhammad Hafish Widiatmoko"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/22.jpg" alt="Ayu">
+                            </div>
+                            <h3>AYU</h3>
+                            <p class="quote">"Mustika Ayu Noraini"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/23.jpg" alt="Nabila">
+                            </div>
+                            <h3>NABILA</h3>
+                            <p class="quote">"Nabila"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/24.jpg" alt="Dini">
+                            </div>
+                            <h3>DINI</h3>
+                            <p class="quote">"Nabila Dini Anggraeni"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/25.jpg" alt="Naura">
+                            </div>
+                            <h3>NAURA</h3>
+                            <p class="quote">"Naura Putri Aulia"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/26.jpg" alt="Vita">
+                            </div>
+                            <h3>VITA</h3>
+                            <p class="quote">"Nur Vita Sari"</p>
+                        </div>
+                        <div class="member-item">
+                           <div class="avatar-box">
+                                <img src="image/27.jpg" alt="Putri">
+                            </div>
+                            <h3>PUTRI</h3>
+                            <p class="quote">"Putri Ramadhani"</p>
+                        </div>
+                        <div class="member-item">
+                           <div class="avatar-box">
+                                <img src="image/28.jpg" alt="Sekar">
+                            </div>
+                            <h3>SEKAR</h3>
+                            <p class="quote">"Sekar Putri Andini"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/29.jpg" alt="Nisa">
+                            </div>
+                            <h3>NISA</h3>
+                            <p class="quote">"Syafrina Khaerunisa Puspitasari"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/30.jpg" alt="Tiara">
+                            </div>
+                            <h3>TIARA</h3>
+                            <p class="quote">"Tiara Ragil Safitri"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/31.jpg" alt="Zaki">
+                            </div>
+                            <h3>ZAKI</h3>
+                            <p class="quote">"Wildan Zaki Diarja"</p>
+                        </div>
+                        <div class="member-item">
+                            <div class="avatar-box">
+                                <img src="image/32.jpg" alt="Winda">
+                            </div>
+                            <h3>WINDA</h3>
+                            <p class="quote">"Winda Choirunisa"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 4. HALAMAN KENANGAN -->
+             <section id="kenangan" class="tab-page">
+                <div class="glass-card page-card">
+                    <div class="section-header">
+                        <h2>Galeri Kenangan</h2>
+                        <p>Potret momen berharga yang tak akan terlupakan</p>
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="memory-photo" onclick="openGallery('Kelas VII')">
+                            <img src="image/1.png" alt="Kelas VII">
+                            <span>Kelas VII</span>
+                        </div>
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="memory-photo" onclick="openGallery('Kelas VIII')">
+                            <img src="image/2.png" alt="Kelas VIII">
+                            <span>Kelas VIII</span>
+                        </div>
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="memory-photo" onclick="openGallery('Kelas IX')">
+                            <img src="image/3.png" alt="Kelas IX">
+                            <span>Kelas IX</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. HALAMAN PERJALANAN -->
+            <section id="perjalanan" class="tab-page">
+                <div class="glass-card page-card">
+                    <div class="section-header">
+                        <h2>Perjalanan Kita</h2>
+                        <p>Timeline jejak langkah dari awal masuk hingga lulus</p>
+                    </div>
+                    <div class="timeline-container">
+                        <div class="timeline-box">
+                            <span class="time-tag">2021-2022(Awal Mula)</span>
+                            <h3>Memulai Cerita Bersam (Kelas 7)</h3>
+                            <p>Di awal masuk SMP, kita mulai mengenal satu sama lain dan beradaptasi dengan lingkungan baru. 
+                                Dari yang awalnya masih canggung, perlahan mulai terbentuk kebersamaan di dalam kelas. 
+                                Salah satu momen yang cukup berkesan adalah saat praktik membuat jamu dari tanaman herbal, 
+                                di mana kita belajar mengolah bahan sederhana sekaligus bekerja sama dalam kelompok. 
+                                Dari kegiatan-kegiatan kecil inilah cerita dan kekompakan kelas mulai terbentuk.</p>
+                        </div>
+                        <div class="timeline-box">
+                            <span class="time-tag">2022-2023(Makin Kompak)</span>
+                            <h3>Banyak Momen, Banyak Cerita (Kelas 8)</h3>
+                            <p>Memasuki kelas 8, kebersamaan kita semakin terasa. 
+                                Study tour menjadi salah satu momen yang paling berkesan karena kita bisa belajar sekaligus 
+                                menikmati waktu bersama di luar lingkungan sekolah. Selain itu, ada juga classmeet, berbagai 
+                                kegiatan kelas, kerja kelompok, dan momen-momen sederhana yang dipenuhi canda dan tawa. 
+                                Tahun ini menjadi salah satu bagian perjalanan yang penuh cerita dan semakin mempererat kebersamaan kita.</p>
+                        </div>
+                        <div class="timeline-box">
+                            <span class="time-tag">2023-2024(Penuh Karya)</span>
+                            <h3>Menutup Perjalanan dengan Kenangan (Kelas 9)</h3>
+                            <p>Kelas 9 menjadi tahun terakhir sekaligus salah satu bagian paling berkesan dalam perjalanan kita. 
+                                Selain menghadapi berbagai tugas, ujian, dan persiapan kelulusan, kita juga mengikuti berbagai kegiatan 
+                                dan proyek, salah satunya proyek ecoprint. Melalui proyek tersebut, kita belajar membuat karya dengan 
+                                memanfaatkan bahan-bahan alami sekaligus bekerja sama dalam menyelesaikan tugas. Hingga akhirnya, 
+                                setelah melewati tiga tahun bersama, kita sampai pada momen kelulusan dan harus melanjutkan perjalanan 
+                                masing-masing.</p>
+                        </div>
+                        <div class="timeline-box">
+                            <span class="time-tag">Tiga Tahun, Banyak Cerita </span>
+                            <h3>Setiap langkah, tawa, dan kebersamaan menjadi bagian dari cerita yang akan selalu kita kenang.</h3>
+                            <p>“Dari jamu, perjalanan, classmeet, hingga karya ecoprint—tiga tahun ini 
+                                bukan hanya tentang sekolah, tapi tentang cerita yang pernah kita buat bersama.” 🌿📸✨</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. HALAMAN SOSMED -->
+            <section id="sosmed" class="tab-page">
+                <div class="glass-card page-card text-center">
+                    <div class="section-header">
+                        <h2>Sosial Media 24'C Official</h2>
+                    </div>
+                    <div class="sosmed-container">
+                        <a href="https://instagram.com/esperanza24cc" class="sosmed-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </section>
+            <!-- 8. HALAMAN MASUKAN -->
+<section id="masukan" class="tab-page">
+
+    <div class="glass-card page-card feedback-card">
+
+        <div class="section-header">
+            <h2>💬 Masukan & Penilaian</h2>
+            <p>Menurutmu, bagaimana website 24'C ESPERANZA ini?</p>
+        </div>
+
+        <label>👤 Nama</label>
+        <input type="text" id="namaMasukan" placeholder="Nama kamu (opsional)">
+
+        <label>⭐ Nilai Website</label>
+        <select id="ratingMasukan">
+            <option value="5">⭐⭐⭐⭐⭐ Sangat bagus</option>
+            <option value="4">⭐⭐⭐⭐ Bagus</option>
+            <option value="3">⭐⭐⭐ Cukup</option>
+            <option value="2">⭐⭐ Kurang</option>
+            <option value="1">⭐ Sangat kurang</option>
+        </select>
+
+        <label>💭 Masukan</label>
+        <textarea id="isiMasukan" rows="5"
+            placeholder="Tulis kritik, saran, atau bagian yang kamu suka..."></textarea>
+
+        <button onclick="kirimMasukan()" class="feedback-button">
+            📩 Kirim Masukan
+        </button>
+
+    </div>
+
+</section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer">
+            <p>© 2026 Asep Romadoni — Personal Project</p>
+        </footer>
+
+    </div>
+    <!-- POPUP FOTO -->
+<div id="photoModal" class="photo-modal" onclick="closePhoto()">
+    <span class="close-photo">&times;</span>
+    <img id="modalImage" src="" alt="Foto Kenangan">
+</div>
+<!-- POPUP BANYAK FOTO -->
+<div id="galleryModal" class="gallery-modal">
+    <div class="gallery-content">
+
+        <span class="close-gallery" onclick="closeGallery()">&times;</span>
+
+        <h2 id="galleryTitle"></h2>
+
+        <div id="galleryPhotos" class="gallery-popup-grid"></div>
+
+    </div>
+</div>
+<!-- POPUP FOTO ANGGOTA -->
+<div id="memberPhotoModal" class="member-photo-modal" onclick="closeMemberPhoto()">
+    <span class="close-member-photo">&times;</span>
+    <img id="memberModalImage" src="" alt="Foto Anggota">
+</div>
+<audio id="anggotaMusic" preload="auto">
+    <source src="music/perunggu ini abadi.mp3" type="audio/mpeg">
+</audio>
+    <!-- JAVASCRIPT UNTUK PINDAH HALAMAN / TAB -->
+    <script>
+       const anggotaMusic = document.getElementById('anggotaMusic');
+       anggotaMusic.addEventListener('ended', function() {
+    anggotaMusic.currentTime = 0;
+    anggotaMusic.play();
+});
+
+function switchTab(tabId) {
+
+    // Sembunyikan semua halaman
+    const pages = document.querySelectorAll('.tab-page');
+    pages.forEach(page => page.classList.remove('active'));
+
+    // Hapus status aktif semua tombol
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Tampilkan halaman yang dipilih
+    document.getElementById(tabId).classList.add('active');
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+});
+
+    // Aktifkan tombol menu
+    event.currentTarget.classList.add('active');
+
+    // ==============================
+// MUSIK HALAMAN ANGGOTA & KENANGAN
+// ==============================
+if (tabId === 'anggota' || tabId === 'kenangan' || tabId === 'perjalanan') {
+    anggotaMusic.play().catch(error => {
+        console.log("Musik gagal diputar:", error);
+    });
+} else {
+    anggotaMusic.pause();
+    anggotaMusic.currentTime = 0;
+}
+}
+    </script>
+
+    <script>
+function openPhoto(image) {
+    const modal = document.getElementById('photoModal');
+    const modalImage = document.getElementById('modalImage');
+
+    const galleryModal = document.getElementById('galleryModal');
+    galleryModal.classList.remove('active');
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt;
+
+    modal.classList.add('active');
+}
+
+function closePhoto() {
+    document.getElementById('photoModal').classList.remove('active');
+    document.getElementById('galleryModal').classList.add('active');
+}
+</script>
+<script>
+
+const galleries = {
+    "Kelas VII": {
+        title: "Kelas VII",
+        photos: [
+            "image/tujuh1.jpg",
+            "image/kelas 7.jpg",
+            "image/tujuh2.jpg",
+            "image/tujuh3.jpg",
+            "image/tujuh4.jpg",
+            "image/tujuh5.jpg",
+            "image/tujuh6.jpg",
+            "image/tujuh7.jpg",
+            "image/tujuh8.jpg",
+            "image/tujuh9.jpg",
+            "image/tujuh10.jpg",
+            "image/tujuh11.jpg"
+        ]
+    },
+
+    "Kelas VIII": {
+        title: "Kelas VIII",
+        photos: [
+            "image/delapan1.jpeg",
+            "image/delapan2.jpeg",
+            "image/delapan3.jpeg",
+            "image/delapan4.jpg",
+            "image/delapan5.jpg",
+            "image/delapan7.jpg",
+            "image/delapan8.jpg",
+            "image/delapan6.jpg",
+            "image/delapan9.jpg",
+            "image/delapan10.jpg",
+            "image/delapan11.jpg",
+            "image/delapan13.jpg",
+            "image/delapan12.jpg",
+            "image/delapan14.jpg",
+            "image/delapan15.jpg",
+            "image/delapan19.jpg",
+            "image/delapan18.jpg",
+            "image/delapan17.jpg",
+            "image/delapan20.jpg",
+            "image/delapan16.jpg",
+            "image/delapan21.jpg",
+            "image/delapan26.jpg",
+            "image/delapan25.jpg",
+            "image/delapan24.jpg",
+            "image/delapan27.jpg",
+            "image/delapan23.jpg",
+            "image/delapan28.jpeg",
+            "image/delapan29.jpg",
+            "image/delapan30.jpg",
+            "image/delapan32.jpg",
+            "image/delapan33.jpg",
+            "image/delapan34.jpg",
+            "image/Studytour1.jpeg",
+            "image/delapan35.jpeg",
+            "image/delapan36.jpeg",
+            "image/delapan37.jpeg",
+            "image/delapan38.jpeg"
+        ]
+    },
+
+    "Kelas IX": {
+        title: "Kelas IX",
+        photos: [
+            "image/hariguru.jpeg",
+            "image/sembilan.jpeg",
+            "image/sembilan1.jpg",
+            "image/sembilan2.jpeg",
+            "image/sembilan3.jpeg",
+            "image/sembilan4.jpg",
+            "image/sembilan5.jpg",
+            "image/sembilan6.jpg",
+            "image/sembilan7.jpg",
+            "image/sembilan8.jpg",
+            "image/sembilan9.jpg",
+            "image/sembilan11.jpeg",
+            "image/sembilan12.jpeg",
+            "image/sembilan13.jpeg",
+            "image/sembilan14.jpeg",
+            "image/sembilan15.jpeg",
+            "image/sembilan16.jpeg",
+            "image/sembilan17.jpeg",
+            "image/sembilan18.jpeg",
+            "image/sembilan19.jpeg",
+            "image/sembilan20.jpeg",
+            "image/sembilan21.jpg",
+            "image/sembilan22.jpg",
+            "image/eco1.jpg",
+            "image/eco2.jpg",
+            "image/eco3.jpg",
+            "image/eco4.jpg",
+            "image/eco5.jpg",
+            "image/eco6.jpg",
+            "image/eco7.jpg",
+            "image/eco8.jpg",
+            "image/eco9.jpg",
+            "image/eco10.jpg",
+            "image/eco11.jpg",
+            "image/eco12.jpg",
+            "image/eco13.jpg",
+            "image/eco14.jpg",
+            "image/eco15.jpg",
+            "image/eco16.jpg",
+            "image/sembilan23.jpeg",
+            "image/sembilan24.jpeg",
+            "image/sembilan25.jpg",
+            "image/sembilan26.jpeg"
+        ]
+    },
+};
+
+
+function openGallery(type) {
+    const modal = document.getElementById("galleryModal");
+    const title = document.getElementById("galleryTitle");
+    const photos = document.getElementById("galleryPhotos");
+
+    title.textContent = galleries[type].title;
+    photos.innerHTML = "";
+
+    galleries[type].photos.forEach(photo => {
+        const img = document.createElement("img");
+
+        img.src = photo;
+        img.alt = galleries[type].title;
+
+        // Klik foto untuk zoom
+        img.onclick = function(event) {
+            event.stopImmediatePropagation();
+            openPhoto(img);
+        };
+
+        photos.appendChild(img);
+    });
+
+    modal.classList.add("active");
+}
+
+
+function closeGallery() {
+
+    document.getElementById("galleryModal")
+        .classList.remove("active");
+
+}
+function openMemberPhoto(image) {
+    const modal = document.getElementById('memberPhotoModal');
+    const modalImage = document.getElementById('memberModalImage');
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt;
+
+    modal.classList.add('active');
+}
+
+function closeMemberPhoto() {
+    document.getElementById('memberPhotoModal').classList.remove('active');
+}
+
+document.querySelectorAll('.member-item img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+
+    img.addEventListener('click', function(event) {
+        event.stopPropagation();
+        openMemberPhoto(this);
+    });
+});
+function kirimMasukan() {
+
+    const nama = document.getElementById("namaMasukan").value || "Anonim";
+    const rating = document.getElementById("ratingMasukan").value;
+    const masukan = document.getElementById("isiMasukan").value;
+
+    if (masukan.trim() === "") {
+        alert("Tulis masukannya dulu ya");
+        return;
+    }
+
+    const nomorWhatsApp = "6285169781410";
+
+    const pesan =
+        "*MASUKAN WEBSITE 24'C ESPERANZA*" +
+        "\n\n" +
+        "Nama: " + nama +
+        "\nNilai: " + rating + "/5" +
+        "\nMasukan: " + masukan;
+
+    const linkWhatsApp = 
+        "https://wa.me/" + nomorWhatsApp +
+        "?text=" + encodeURIComponent(pesan);
+
+    window.open(linkWhatsApp, "_blank");
+}
+</script>
+</body>
+</html>
+
+
